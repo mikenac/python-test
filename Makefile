@@ -7,6 +7,6 @@ lint:
 test: lint
 	nosetests --with-xcoverage --cover-erase
 
-.PHONY: init test
+.PHONY: init test lint
 
  
