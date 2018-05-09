@@ -19,12 +19,13 @@ class JsonMessageHandlerTests (unittest.TestCase):
 		json_dict = json.loads(json_text)
 		self.assertEqual("45", json_dict["job"]["employeeId"])
 
+'''
 	def test_replace_id_35(self):
 		handler = JsonMessageHandler()
 		json_text = handler.createTemplateEmployeeOutput("35")
 		json_dict = json.loads(json_text)
 		self.assertEqual("75", json_dict["job"]["employeeId"])	
-
+'''
 
 if __name__ == '__main__':
     unittest.main()
