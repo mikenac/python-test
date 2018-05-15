@@ -8,10 +8,13 @@ venv/bin/activate: requirements.txt
 lint:
 	. venv/bin/activate; pylint -j 4 src/*.py
 
-test: lint
+test: init lint
 		. venv/bin/activate; \
 		python -m unittest discover -s test -p *.py; \
-		coverage report -m src/*.py; \
+		coverage report -m src/*.py; 
+clean:
+	rm -rf venv
+	find . -name "*.pyc" -delete
 
 .PHONY: init test lint
 
