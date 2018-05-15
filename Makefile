@@ -7,15 +7,16 @@ venv/bin/activate: requirements.txt
 	touch venv/bin/activate
 
 lint:
-	. venv/bin/activate; pylint -j 4 src/*.py
+	@. venv/bin/activate; pylint -j 4 src/*.py
 
 test: init lint
-		. venv/bin/activate; \
-		nosetests --with-xcoverage --cover-branches --cover-erase; \
+		@. venv/bin/activate; \
+		coverage run -m unittest discover -s test -p *.py; \
 		coverage report -m src/*.py; 
 clean:
-	rm -rf venv
-	find . -name "*.pyc" -delete
+	@rm -rf venv
+	@find . -name "*.pyc" -delete
+	@rm .coverage
 
 .PHONY: init test lint
 
