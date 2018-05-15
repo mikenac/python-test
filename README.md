@@ -1,6 +1,6 @@
-# Python Unit Testing and Coverage Examples
+# Python File Structure/Unit Testing and Coverage Examples
 
-### Provides some examples of python unit testing and test coverage
+### Provides some examples of python project structure, unit testing, and coverage reports
 
 ### Requires:
 * Make
