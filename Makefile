@@ -5,13 +5,13 @@ venv/bin/activate: requirements.txt
 	test -d venv || virtualenv venv
 	. venv/bin/activate; pip install -Ur requirements.txt
 	touch venv/bin/activate
-	
+
 lint:
 	. venv/bin/activate; pylint -j 4 src/*.py
 
 test: init lint
 		. venv/bin/activate; \
-		python -m unittest discover -s test -p *.py; \
+		nosetests --with-xcoverage --cover-branches --cover-erase; \
 		coverage report -m src/*.py; 
 clean:
 	rm -rf venv
