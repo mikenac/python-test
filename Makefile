@@ -5,6 +5,7 @@ venv/bin/activate: requirements.txt
 	test -d venv || virtualenv venv
 	. venv/bin/activate; pip install -Ur requirements.txt
 	touch venv/bin/activate
+	
 lint:
 	. venv/bin/activate; pylint -j 4 src/*.py
 
