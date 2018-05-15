@@ -2,11 +2,12 @@
 
 import unittest
 import json
-from src.json_message_handler import *
+from src.json_message_handler import JsonMessageHandler
+
 
 class TestJsonMessageHandler(unittest.TestCase):
     """tests Json message handling like a boss"""
-    
+
     def setUp(self):
         """Setup for the test class"""
 
@@ -23,12 +24,14 @@ class TestJsonMessageHandler(unittest.TestCase):
         """ Special case test for the transformation of 35 """
         json_text = JsonMessageHandler.create_template_employee("35")
         json_dict = json.loads(json_text)
-        self.assertEqual("75", json_dict["job"]["employeeId"])  
-    
+        self.assertEqual("75", json_dict["job"]["employeeId"])
+
+
     def test_multiplication(self):
         """ Simple multiplication test """
         product = JsonMessageHandler.multiply(2, 2)
         self.assertEqual(4, product)
+
 
 if __name__ == '__main__':
     unittest.main()

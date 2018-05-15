@@ -2,6 +2,7 @@
 
 import json
 
+
 class JsonMessageHandler:
     """ handles json messages like a boss """
 
