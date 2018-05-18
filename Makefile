@@ -21,7 +21,7 @@ clean:
 	@rm .coverage
 
 ci_init:
-	pip install -Ur requirements.txt
+	pip install -r requirements.txt
 
 ci:
 	pylint -j 4 ${MODULE_PATH}/*.py
