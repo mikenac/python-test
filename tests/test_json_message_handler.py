@@ -37,7 +37,7 @@ class TestJsonMessageHandler(unittest.TestCase):
     
     @patch("requests.get")
     def test_request_succcess(self, mocked_get):
-        mocked_get.return_value = MagicMock(status_code=200, response="<HTML></HMTL>")
+        mocked_get.return_value = MagicMock(status_code=200, response="""{"somethings":"somevalue"}""")
         resp = JsonMessageHandler.request_json("http://www.google.com")
         
         self.assertEqual(200, resp.status_code)

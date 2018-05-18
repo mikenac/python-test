@@ -38,11 +38,11 @@ class JsonMessageHandler:
     @staticmethod
     def some_not_covered_function(arg1, arg2):
         return arg1 / arg2
-    
+
     @staticmethod
     def request_json(url):
         """Get a json object from a REST API"""
         resp = requests.get(url)
-        if (resp.status_code != 200):
-            raise(requests.HTTPError(resp.response))
+        if resp.status_code != 200:
+            raise requests.HTTPError(resp.response)
         return resp
