@@ -4,4 +4,4 @@ python:
 install: 
   - make init
 script: 
-  - make test
+  - make ci

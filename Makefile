@@ -20,6 +20,14 @@ clean:
 	@find . -name "*.pyc" -delete
 	@rm .coverage
 
-.PHONY: init test lint
+ci_init:
+	pip install -Ur requirements.txt
+
+ci:
+	pylint -j 4 ${MODULE_PATH}/*.py
+	coverage run --branch -m unittest discover -s tests/
+	coverage report --omit "*__init__*" -m ${MODULE_PATH}/*.py
+
+.PHONY: init test lint ci ci_init
 
  
