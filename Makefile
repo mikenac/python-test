@@ -12,7 +12,8 @@ lint:
 
 test: init lint
 		@. venv/bin/activate; \
-		coverage run --branch -m unittest discover -s tests -p *.py; \
+		coverage run --branch -m unittest discover -s tests/; 
+		@. venv/bin/activate; \
 		coverage report --omit "*__init__*" -m ${MODULE_PATH}/*.py; 
 clean:
 	@rm -rf venv
