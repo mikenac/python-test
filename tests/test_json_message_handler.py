@@ -1,6 +1,7 @@
 """ This guys tests like nobody """
 
 import unittest
+import unittest.mock
 import json
 from unittest.mock import MagicMock
 from unittest.mock import patch
