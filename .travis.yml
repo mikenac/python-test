@@ -2,6 +2,6 @@ language: python
 python:
   - "3.6"
 install: 
-  - make init
+  - pip install -r requirements.txt
 script: 
   - make ci
