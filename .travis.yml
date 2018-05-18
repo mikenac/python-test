@@ -2,6 +2,6 @@ language: python
 python:
   - "3.6"
 install: 
-  - make ci_init
+  - make init
 script: 
-  - make ci
+  - make test
