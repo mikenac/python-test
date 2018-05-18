@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/mikenac/python-test.svg?branch=master)](https://travis-ci.org/mikenac/python-test)
+
 # Python File Structure/Unit Testing and Coverage Examples
 
 ### Provides some examples of python project structure, unit testing, and coverage reports
