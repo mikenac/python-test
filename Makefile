@@ -6,12 +6,12 @@ REQ_STAMP = $(VENV)/.req_stamp
 # editable
 MODULE_PATH=json_message_processor
 
-virtualenv: $(PYTHON)
+virtualenv: $(PYTHON) # creates a virtual environment
 
 $(PYTHON):
 	@$(VIRTUALENV) $(VENV)
 
-init: virtualenv $(REQ_STAMP)
+init: virtualenv $(REQ_STAMP) # will run any time the requirements.txt file has been updated
 
 $(REQ_STAMP): requirements.txt
 	@$(VENV)/bin/pip install -Ur requirements.txt
