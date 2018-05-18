@@ -8,7 +8,7 @@ class JsonMessageHandler(object):
 
     def __init__(self):
         """init"""
-  
+
     @staticmethod
     def create_template_employee(employee_id):
         """ Add the employee ID to a templated employee """
