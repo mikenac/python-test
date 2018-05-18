@@ -3,9 +3,11 @@
 import json
 import requests
 
-class JsonMessageHandler:
+class JsonMessageHandler(object):
     """ handles json messages like a boss """
 
+    def __init__(self):
+        
     @staticmethod
     def create_template_employee(employee_id):
         """ Add the employee ID to a templated employee """
