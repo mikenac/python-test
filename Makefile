@@ -49,6 +49,7 @@ dep:
 clean:
 	@rm -rf $(VENV)
 	@find . -name "*.pyc" -delete
+	@find . -name "*.pyo" -delete
 	@find . -name .coverage -delete
 
 .PHONY: init test lint dep
