@@ -14,6 +14,8 @@ $(PYTHON):
 init: virtualenv $(REQ_STAMP) # will run any time the requirements.txt file has been updated
 
 $(REQ_STAMP): requirements.txt
+	@$(VENV)/bin/pip install pylint
+	@$(VENV)/bin/pip install coverage
 	@$(VENV)/bin/pip install -Ur requirements.txt
 	@touch $(REQ_STAMP)
 
